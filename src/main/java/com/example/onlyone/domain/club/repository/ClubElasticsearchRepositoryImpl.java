@@ -55,13 +55,13 @@ public class ClubElasticsearchRepositoryImpl implements ClubElasticsearchReposit
                                                 .minimumShouldMatch("70%")
                                         )
                                 )
-                                .must(m -> m
+                                .filter(f -> f
                                         .term(t -> t
                                                 .field("city.keyword")
                                                 .value(city)
                                         )
                                 )
-                                .must(m -> m
+                                .filter(f -> f
                                         .term(t -> t
                                                 .field("district.keyword")
                                                 .value(district)
@@ -90,7 +90,7 @@ public class ClubElasticsearchRepositoryImpl implements ClubElasticsearchReposit
                                                 .minimumShouldMatch("70%")
                                         )
                                 )
-                                .must(m -> m
+                                .filter(f -> f
                                         .term(t -> t
                                                 .field("interestId")
                                                 .value(interestId)
@@ -119,19 +119,19 @@ public class ClubElasticsearchRepositoryImpl implements ClubElasticsearchReposit
                                                 .minimumShouldMatch("70%")
                                         )
                                 )
-                                .must(m -> m
+                                .filter(f -> f
                                         .term(t -> t
                                                 .field("city.keyword")
                                                 .value(city)
                                         )
                                 )
-                                .must(m -> m
+                                .filter(f -> f
                                         .term(t -> t
                                                 .field("district.keyword")
                                                 .value(district)
                                         )
                                 )
-                                .must(m -> m
+                                .filter(f -> f
                                         .term(t -> t
                                                 .field("interestId")
                                                 .value(interestId)
